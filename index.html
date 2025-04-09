@@ -1,13 +1,42 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Futures Contract Calculator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>ContractSize Calculator</h1>
-    <p>text</p>
-    <p>text</p>
-    <p>text</p>
+    <div class="calculator-container">
+        <h1>Futures Contract Calculator</h1>
+        <div class="input-group">
+            <label for="account-balance">Account Balance ($):</label>
+            <input type="number" id="account-balance" placeholder="Enter your account balance">
+        </div>
+        <div class="input-group">
+            <label for="risk-percentage">Risk Percentage (%):</label>
+            <input type="number" id="risk-percentage" placeholder="Enter risk percentage per trade">
+        </div>
+        <div class="input-group">
+            <label for="stop-loss">Stop Loss (Points):</label>
+            <input type="number" id="stop-loss" placeholder="Enter stop loss in points">
+        </div>
+        <div class="input-group">
+            <label for="contract-type">Contract Type:</label>
+            <select id="contract-type">
+                <option value="nq-emini">NQ E-mini</option>
+                <option value="nq-micro">NQ Micro</option>
+                <option value="es-emini">ES E-mini</option>
+                <option value="es-micro">ES Micro</option>
+                <option value="ym-emini">YM E-mini</option>
+                <option value="ym-micro">YM Micro</option>
+            </select>
+        </div>
+        <button id="calculate">Calculate Position Size</button>
+        <div class="result" id="result">
+            <!-- Results will be displayed here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
